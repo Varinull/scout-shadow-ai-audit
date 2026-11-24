@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAA4JGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgICAgICAgICAgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIgogICAgICAgICAgICB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIKICAgICAgICAgICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoV2luZG93cyk8L3htcDpDcmVhdG9yVG9vbD4KICAgICAgICAgPHhtcDpDcmVhdGVEYXRlPjIwMTYtMTItMDNUMDE6MDY6NTQtMDU6MDA8L3htcDpDcmVhdGVEYXRlPgogICAgICAgICA8eG1wOk1vZGlmeURhdGU+MjAxNi0xMi0wM1QwMjozNjowMi0wNTowMDwveG1wOk1vZGlmeURhdGU+CiAgICAgICAgIDx4bXA6TWV0YWRhdGFEYXRlPjIwMTYtMTItMDNUMDI6MzY6MDItMDU6MDA8L3htcDpNZXRhZGF0YURhdGU+CiAgICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2UvcG5nPC9kYzpmb3JtYXQ+CiAgICAgICAgIDxwaG90b3Nob3A6Q29sb3JNb2RlPjM8L3Bob3Rvc2hvcDpDb2xvck1vZGU+CiAgICAgICAgIDx4bXBNTTpJbnN0YW5jZUlEPnhtcC5paWQ6Zjg4ODFjN2UtZjRlNy0xYzQxLWJkNWEtYWI2OGZiYTAwMzY4PC94bXBNTTpJbnN0YW5jZUlEPgogICAgICAgICA8eG1wTU06RG9jdW1lbnRJRD54bXAuZGlkOmY4ODgxYzdlLWY0ZTctMWM0MS1iZDVhLWFiNjhmYmEwMDM2ODwveG1wTU06RG9jdW1lbnRJRD4KICAgICAgICAgPHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD54bXAuZGlkOmY4ODgxYzdlLWY0ZTctMWM0MS1iZDVhLWFiNjhmYmEwMDM2ODwveG1wTU06T3JpZ2luYWxEb2N1bWVudElEPgogICAgICAgICA8eG1wTU06SGlzdG9yeT4KICAgICAgICAgICAgPHJkZjpTZXE+CiAgICAgICAgICAgICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6YWN0aW9uPmNyZWF0ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNlSUQ+eG1wLmlpZDpmODg4MWM3ZS1mNGU3LTFjNDEtYmQ1YS1hYjY4ZmJhMDAzNjg8L3N0RXZ0Omluc3RhbmNlSUQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMTYtMTItMDNUMDE6MDY6NTQtMDU6MDA8L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpzb2Z0d2FyZUFnZW50PkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE3IChXaW5kb3dzKTwvc3RFdnQ6c29mdHdhcmVBZ2VudD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgIDwvcmRmOlNlcT4KICAgICAgICAgPC94bXBNTTpIaXN0b3J5PgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjAwMDAvMTAwMDA8L3RpZmY6WFJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyMDAwMC8xMDAwMDwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT42NTUzNTwvZXhpZjpDb2xvclNwYWNlPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MzI8L2V4aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFlEaW1lbnNpb24+MzI8L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Po1KyCwAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAABCtJREFUeNrEl1tsFGUUx3/fzOylu/RCadrUVhOb0mLAWK0BUUlBN8hL1Vij0hgoCUy9+9AYMSZq9EXgAW8Jsn2oWnxQAvGhWEg0xZQWMGyKoYJJm5JUmnKRJrTddm8znw/d2ul2d7pTSTjJSSbfuf2/k3P5RkgpubOkh+C1C5wsrUXCUjhfwl4JIQm9El6RoNjaSPkfawAIhXGXbynwy4ATwGrL2XpgA/ByMp4tKSBBSvY+2IQpFKcA3kkJPkuNwIvZOJiJmIhw6u7H+OShnU6Cu4GnbeQvZA8AIB7mo0db2L3urWwBSCBuI485AyAlxMLsqd3FE/VBhnLLFrONAz/YyNudAQCQJiRidN2zgfUNh9hXs52o6rKz/wo4m+b8AHAsGwAC/VwGaC5w5bDuyhlaf/uY+8cGM/nwAG8CTwFTwHfAkXSK48XFjFZWUt3TkwWAWdJy8BgROjpeJTDy+5JGzcSKFYTq6xlcu5ao38/r27bNuV/UOjFN1JPLUF4ZjDgLHFm2jFONjQyvWcNUQQGuaBRXJGJTA5nINHCZCTuNTcA+YLP1cKy8nP6NG4n5fLinpxGmuTDB/3OQVwDvAjuTl9kM/AKYABfr6nDFYiiGMTf5df22AQgAh4ASy5lhbesAMBQMOmjD7OlDoCMlOEAPYJ7fsmXejVNvPS8D8mDt/L5sDqVVVKUJ4AW+BranK1eg7WJdHTWdnQuXbgYQCzKQBKQkgwlAIIQS1rwa8ClQDexKFp2VhsOFhX+cbWgQjnJp3c12fN9LR703vAV3Wfb65zN7NMlCfN/V1MQX7e0iW59yxtJGqJ+b+37jkvrIs99y05OHBFVCvxVA1Ofb1LZ/P06CSynti3BefSQiWl9RFVHVDfAAsMqieiGak9NtaprqtJqz6gLRHBKgaCVTN8mPTQI8D1iDHYn6/YmE260EW1ttfQaDQeEYgDxYKxFKrCA6gdeIkzrxgDNTy5cTd7slUi5WhKrjQSSaQwpuf1FhbHxUkUYJUGkRjwC9/5SXY2oaxGJmhpvPXthYwiASHkzD0C8dBXgGyLcIO4GJaxUVSCEWbUFd16VzAG7f9I4/D1/fOnhCTTOEOgBqjh+n+PJlDE1z2QQ3sy7CmcJL1sCXqxjz5glTKGXAwxa1KaAXoHRgoKr69Glfwu1WM6Q/+y5IN45PltbeO+7yr06+hq3LpxrYY6rqk6MrV04qhuHoV0sTzaFcwAeMpbxypWgOgRACX5Gn5a+fbuXHJ99Osc8FuoH3417vgWsVFaiJhDMAwESSU3KjgZYDRlTu6Psm8l5fW5WQMpCidQNomX0BJ/e+OZtyXddt05+hDSVoPkrCV3lu6FcaB37m8avnAbam9PAxYDfQbzN0ssrAgkdoYLibtq4PKA9ft0puAX8DV4DPgB9vx7+xuNO/5/8OAPiX/nDnm7w5AAAAAElFTkSuQmCC" />
+  <title>Shadow-AI &amp; Compliance Readiness Check, Local-Only Local Diagnostic</title>
+  <style>
+        :root, :root[data-theme="dark"] {
+      --bg: #0a0908;
+      --bg-elev: #111010;
+      --bg-card: #151312;
+      --bg-muted: #1b1816;
+      --border: #2a2623;
+      --text: #f0ece6;
+      --text-muted: #9c958e;
+      --accent: #f97316;
+      --accent-strong: #ea580c;
+      --ok: #10b981;
+      --ok-bg: rgba(16, 185, 129, 0.13);
+      --warn: #f59e0b;
+      --warn-bg: rgba(245, 158, 11, 0.14);
+      --crit: #ef4444;
+      --crit-bg: rgba(239, 68, 68, 0.14);
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.42);
+    }
+    :root[data-theme="light"] {
+      --bg: #f4f1ea;
+      --bg-elev: #faf8f3;
+      --bg-card: #fcfbf8;
+      --bg-muted: #efeae0;
+      --border: #d8d0c3;
+      --text: #24201d;
+      --text-muted: #5c554e;
+      --accent: #d95b08;
+      --accent-strong: #b84a04;
+      --ok: #059669;
+      --ok-bg: rgba(5, 150, 105, 0.1);
+      --warn: #b45309;
+      --warn-bg: rgba(180, 83, 9, 0.1);
+      --crit: #b91c1c;
+      --crit-bg: rgba(185, 28, 28, 0.09);
+      --shadow: 0 6px 20px rgba(36, 32, 29, 0.05);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: clamp(18px, 2.5vw, 36px) clamp(16px, 3vw, 48px) 64px;
+    }
+    .demo-banner {
+      display: none;
+      width: 100%;
+      background: var(--warn-bg);
+      border: 1px solid var(--warn);
+      color: var(--text);
+      padding: 12px 18px;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .demo-banner.active { display: flex; }
+    header.top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 18px 22px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+    header.top-bar > div:first-child {
+      flex: 1 1 420px;
+      min-width: 0;
+    }
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--bg-muted);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+    h1 {
+      margin: 4px 0 8px;
+      font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+      line-height: 1.25;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--text-muted);
+      max-width: none;
+      font-size: 14.5px;
+    }
+    .top-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    button, .btn {
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text);
+      transition: all 0.15s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    button:hover, .btn:hover { border-color: var(--accent); }
+    button.primary, .btn.primary {
+      background: var(--accent-strong);
+      border-color: var(--accent-strong);
+      color: #ffffff;
+    }
+    button.primary:hover, .btn.primary:hover { filter: brightness(1.08); }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+    .card h2 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .card p.hint {
+      margin: 0 0 16px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: 14px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+      gap: 12px;
+    }
+    .grid-2 > *, .grid-3 > *, .check-grid > *, .metrics-row > * {
+      min-width: 0;
+    }
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .field label span.opt {
+      font-weight: 400;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%;
+      padding: 9px 11px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-elev);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13.5px;
+    }
+    textarea {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12.5px;
+      min-height: 112px;
+      resize: vertical;
+    }
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .check-pill {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 9px 11px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-elev);
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .check-pill input { margin-top: 3px; }
+    .scanner-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .scanner-bar input[type="text"] { flex: 1 1 320px; }
+    .pill-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: var(--bg-muted);
+    }
+    .pill-tag.ok { color: var(--ok); background: var(--ok-bg); border-color: var(--ok); }
+    .pill-tag.warn { color: var(--warn); background: var(--warn-bg); border-color: var(--warn); }
+    .pill-tag.crit { color: var(--crit); background: var(--crit-bg); border-color: var(--crit); }
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+      gap: 14px;
+      margin: 16px 0 20px;
+    }
+    .metric-box {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .metric-box .m-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .metric-box .m-val {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 4px;
+      line-height: 1.25;
+    }
+    .metric-box .m-val.is-text {
+      font-size: 17.5px;
+    }
+    .metric-box .m-sub {
+      margin-top: 7px;
+      padding-top: 6px;
+      border-top: 1px dashed var(--border);
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .metric-box .m-sub div + div { margin-top: 2px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    th, td {
+      text-align: left;
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .finding-item {
+      border: 1px solid var(--border);
+      background: var(--bg-elev);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+    .finding-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    .pull-card {
+      border: 1px dashed var(--accent);
+      background: var(--bg-elev);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 12px 0;
+    }
+    .tab-btn.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--bg-muted);
+    }
+    .status-note {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    #resultsSection { display: none; }
+    #resultsSection.visible { display: block; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #fff; color: #000; }
+      .card { box-shadow: none; border-color: #ccc; }
+    }
+  
+    /* === VARINULL BRAND & EASY-EYE THEME OVERRIDES === */
+    .vn-brand-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none !important;
+    }
+    .vn-wordmark-img {
+      height: 28px;
+      width: auto;
+      display: block;
+      background: transparent !important;
+      border: none !important;
+      user-select: none;
+    }
+    .vn-brand-sep {
+      width: 1px;
+      height: 24px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+    html[data-theme="light"] input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+    html[data-theme="light"] select,
+    html[data-theme="light"] textarea,
+    html[data-theme="light"] pre,
+    html[data-theme="light"] code {
+      background-color: #efeae0 !important;
+      color: #24201d !important;
+      border-color: #d6cebf !important;
+    }
+    html[data-theme="light"] .card,
+    html[data-theme="light"] section.card,
+    html[data-theme="light"] details {
+      background-color: #fcfbf8 !important;
+      border-color: #dcd5c9 !important;
+      box-shadow: 0 6px 20px rgba(36, 32, 29, 0.05) !important;
+    }
+    html[data-theme="light"] header,
+    html[data-theme="light"] .topbar {
+      background-color: #faf8f3 !important;
+      border-color: #dcd5c9 !important;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="demoBanner" class="demo-banner no-print">
+      <div>
+        <strong>Demo Mode Active, Apex Health &amp; Logistics:</strong>
+        Pre-loaded realistic shadow-AI scenario (consumer AI pasting across 4 depts, 5 unreviewed Chrome OAuth extensions, Local-Only allowlisting, upcoming buyer security questionnaire).
+      </div>
+      <div style="display:flex; gap:8px;">
+        <button type="button" onclick="switchMode('production')">Switch to Blank Assessment</button>
+      </div>
+    </div>
+
+    <header class="top-bar">
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px; flex-wrap:wrap;">
+          <a href="/" class="vn-brand-wrap" title="Varinull Home">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAAA+CAYAAAC/dFDqAAAO1klEQVR42u2deXwV1RXHv/PmvZeEJISwRIhsgrKZIgkSRKC4AKK0VupWLShSPijyaZFWq1XRorS17vqprWvdanEpCirihiIudUHZFDAoS0NYE9QAyVtn+se9TyaTt8y89/LiI3M+n3xg5s3cucvvnnPuueecqzBjJVlLLjedGurY/PSZtA8cbI0a/Ag4GzgWKAFqgXXAS8CnP5RuWjh3Lrv79MEdCGTdELtxKBkqAm4FJgPtTL/9HLgOeAK4WoLWoWR5ULY3QNE1vFowk588AngDmBEFnMaJPw14HSh1YNZWAaprHMzryOpO/TPZXw8Dwyw+Xw48DnhbdRJrmgPQ1gJoo7cd88t/lakvngX8xOY7Y4FzW6uLAnl5+Nu1Q9F1B6CtQsEGXjvqFD7pMigTX7ssyfcuBZTW6J49ffpQ1707ajDoALR1uKhOSHExY8yN7Mrr1JJf6gyUJfluGXBka3TPhtGjs5Z7Hj6r+FAjq7sOYeLE+1i6ZCYljd+0xFe6AsnOgAKgGNjeEhWr7dEDTVWbsegDxcVsKS/PSvPSYWZmUiBQz2fdypl4xn28+vJMOvm/S/dHwsAParXhKyjg7WnT2DZ4MLrLBSZOqQCucDirOaiLw4YU8NezslsFp028j68L0y5Rd6Zg0/wG2J3OyjQWFrJkzhw2DR+OommowSBqKNTkzxUKNQOtA9BW56T7+bTrECrOX8gzfcens/BvgU+SfHc1sCed4Hxl9mx29OtH7oEDWc0h2xhAJUhDPuo97Zg89hYu/fH1NLhz01X4g0m+d386W/jW9OnsGDCAnIYGDndSGTrj8GyZHkZTFD4tHcrC3mPICQcZWrsh1VK/AvoAx9l451ng5nQ1a93YsawdNw6v309boMMXoAKlEA5Ql1/CS31P44sORzF073o6+utTKfRNhNnIyvbVW8DFQGM6WrN27FhWTJmCOxg8rMV6GwKoJC0M4QDrux7HC73GEHaplO3bRE44KeN1AFgEBCVQ86M8UwvcA8wEkp8NisLOfv2oLylh87BhvH/BBajBIK4s3rq0r7Bls7tdMhxV9YKngFHb3uHZN66iW0NdKgUeCYwDKhH77QG5IHoV+B9Jmo6qRoygasQIUBT29uqF5hJLBXcg0GY4ZxsFqIE8eZQ01PLQW3M5c9uKVq9Obc+erBk/nuqyMg4WFwsHD13HnaVblA5A00HuXHLDft5bODkdC6ikaF9pKWsmTGDT8OEE8vJwBwK4wmEcchyWIeTDl9uerYWlGQdoXffurB0/nk2VlQTy8/H4fHgbGx1EOgBtvoDyaKGMfe67khI+mziRryor8RcUCGC2AXsmjqE+O2jV6aez6owz0NxuvA0NWe1M7HDQ7KARwClAe0Sw3HtxOUI4jNfnc4DpALTF6QREcNwZBkl0KVABbI72gq4ofFNaKpw4HHJEPC3nuHwP8A4i/MNlivY8IdaLX44cSc2gQVntn+lw0B82/RS4G7EfT5yoz2b0VWUlb0+bhquN2zUdDtoy5AH+AixOAE6AXeYbvsJCPjjvPFCUNrVN6XDQzFAp8AgwweLzW5pclJfzyaRJHOjUyRHtDkDTThXAU8AAi8/vAjaZQzIaioocI7wj4tNOE4ClNsCJXDjVRcD5yuzZ+AoKHHA6AE07XQw8j0gIZodeANBcLl6bNYuaAQMcsZ4mEe9BBAEGUgC6F/BlqN5eQAV0+/EgCZ2HrwX+ZLgOInw6E4Uc1wLLAD4/5RSqy8rMIRlu2c96nLppgB1X+bwUnaHz5JjpLVS+ecw0IGQXoDcC58gOeh24xiZQZwCXywqskf83B6a3Ay4BRstv6jEGKAhslAMdb0fmEeD4JAG6H1gJvIjw2yQv5AdhHrodkbEuArjngb8j0tfcTmLv+dr6khI+Ovts3CIkoy8i7c2psnxPgjrrwD7gv8BzxA7SGwzcifBH3Qf8AVhhMwHaA4ioAJ+0UDxr+L0fwtbbW07OGyN9lYIFZIIE6GLgJjnWlgB6DRCJKjsWeBJYZWMGXgkcI68HAgvk4BtpPPA3G426UTbkCmBblN+PsakbmmkYwtt9Gbp++RvdK6vG1Xw4XIJzI/CobEe1fP5kC2Uu1hWF5VOnEsjLw+P3T5MDU5JE/UbJtt8nx8fMVSdL0BuZhB2ATgJ+ZriebQLo2SarxawUAHo08DvT9UNYdOh2RWl8rk2OFLSg126OAbR45Z4FvAZ0I3rYBaakCkEpPqL9BeUzZjqVYOPi246/rMuKbuUvIYLhRiByf1YbnksUf7QfeKe6rIztAwfi8fvPl1w+GjiDMeqnReE8VwB/xVKogC0yp40MRel/I6VivM0x9X2jnbVPNHFrt7FW3l8LDJcD7Y7TkErg1wZ9r7/kdDckqMNfJQdQEkzGIgnAq4AOsroD0MOTLz7pprs2PHvO2txwVBVwSILvrwBqNp1wAprb7SYQuNb0+0rgFgl6f4x6qrJ+F8lFWoRmIsKWN9rs83ik2RzDVOJM9FTKy6QddDeJs2sslTrRLTbAEeHQayzW423gKGD6If7hL9/asS9XnHglt314F4XBBrO+lkidWNRYVMT2gQNx+/1dgJ4mMPxeftcKfSzF6xGGxUVPE0DblJlJiSIuSSFfUappBj9OwhTmTSJLiEnwNvLAcVMYc+bD1OZ2MP5SeYjbRqXvgKXoOoHcXBRdV019Eo6yaEzUp/vTyMGy3sykR/HWsUrFUZwjzDKyD8JfskLqkzkk9hZq6cFRm39DB10jL+SjuGnc/BgLq/ea/Z07o6kq6FHDLlWbTMOxTxsA+gUw0nDvt9LcFLZoYioxcZN1hkG5Tir6xSnUsSSjHaKFUHXNCJaTrRjntw0eTKCggJwDBxxUpVnE30HzlNWnYy0m/Deme48hcmAqCLe0eSmCk0zndzdlHRkgTW/xVIU3IzHr6LqDqBbgoIuA5cBJhvs3SBNPPGPq1abdlTppngFhp5xlMgstkIugoIVEsXPlv5nVvxSFKVWvGO+MTqCSLAd2aqpKdVlZ1qbZzgYddB7wY4PuMwyxu7SA2MbXS0z37gZ2cGgnQjGZmaZiL2X2zNYAKM0dlOPRi8ZoTSfOqOWcRZYjdm6MdD2xjfbXIdJaR2gbTXeKchIsnBJRnWm3ypv+HDjN9wbc4QDtQj6j7jsiThkH5QKJYE6Og6QMeDPNMwFpEE0NxhjO/rnAdO8Wk+lGT9H0pJh2tnIsmGaSLV/0g+qh5zdbGLfjI+PqvWOcMj5EbtdVl5XxXZcuqE4wXIs6LK9B7MNPN9y7Ror5epO3jxEw6+TiiJbL+JVQzHcEuljceOhPc+/4PYdW8GGr4v31JvVSFAdNGfCo/wvC+6ZIXvdGeCdFdnZGIvbIjXQzLetmZwWgEXOWakGsdzZx0CDoC/DmM2nL8shTHRBZ6+Jx7Le+L8AR8RlzWN4M/MN07zeSOyFX10ZQvwsszMAkcls45uUICb5Yf13kn2Jy8piJy7uyY/0Ozt38ZuT+iQYrAjHijtZHLjaMGeOYmDLoUX+nPNEiQt2k2B8FnEZzt7iWXroWILJ2JOPNowMH5IImZLBdrgLuQjiwPILq5erPHjQmEEsk3lcC32/Yd/vyS7w+H2GPx0FUBgC6l+bG+ysQh6ga6WWsO0C0NHu5AbHBsNj0LQ3h+HwlYqu1FGGjrUTsmG3AncfI6vf5/ZonI+/kk3ijokm7Rzz3HOfcdBMddu5sLZDqWVS+bqe8WHu+D2GITpQml/4ms9EfsecTaIfsLod3Ibzwz0LYcxdIvViVC6K7ESd0TJViPtQ0JY2LgMttFO+9EuifzTynOtbUULFkyffZkDPMWFwp9q8rzeXHs5rk2LHqxPpwPU3jcsz0NPBpnN/3mq6PRXjVW6UBSYQVROg94EIJtMekiM9BpKT5s7Q6rADmAEcT8vFBtwo2FvfG4G1OgkO5tka5f07n6uquLi0juRzN3lEnxnDsjka5NPcvMC9y95muj0e4KCZDe027hwWIfFYp+4MukAukCpp7j89PUO5GhLG9k8HY/jwi+9v+OBNDQ+zxG8FcKK0K1TY7ZhVit+t22Y7z5OpcRWxhjhY6tP4qau6sp/ueVje47qsOFvTPepr6tfaQ3/ggmJOz2wZQUqGlUoJ5DB5jHwMbJHdU4ojXHjQ/FPc/putlcmIXGJJXfAB8LsEWy+F6u7TqbDGd0LfUNPHvkUykPgYWIgGcT7gTnGYxL8oO0wOI84ISzZo5Um/1GnS7X5Ccs4g7gQNJvHZ8gcg6dwfCP+CXholTBJyP4tpcnX/EtXIh2D1BffLlJPLLTr8ZWKi7XPd8cdJJaKqqqsGg21Q3leQlQjR3vVWyLfcbBri7hbpHo8eBf5ruVck+e9TQ110TWDaM7b3INCnmSN2/zNC+URbKOtllYa95oekgq9stNvxJhB/o0iS2Os0AMwdYmXXArRbKqUIEh5VLUX9oluuhg2dtXW5FvCPNWe8jTvN4EOHNNKuhqIjNFRW4A4FvTVaQXUCNjfb6TO0LEv0YxYekpHkzyXDx9dLfYWoMnf/fcvyWYC/0eF+Ue9sQQX73cshfwwrtsXKIQoEUe+1lZZM5UnogwoHkSBsKskuact6IAtB2wEQ5oz9HZPSwa+4qBv14ctqHh9Z8/O6Hi6bmurXweptc6KnIAB8sLmbB/PmEvV4UTeslB8SN8HOoslm3jlJPa48IPU50Rugg2b+lCfpXQYRTfy37zSrw+svyu8dRz1xSN14k1YN4E3yQXIgWxhk3HVjW5k/5KD24myUvz2RIXdUkqSdbpScQ9uEggAmgjgHTSX2TgsVDcYE3n+JgA7e9fytD6qpAxIJbNdHcIDmn4wDqZLdLL8cEHVXTOH/jYuZ/dC9H7d8REamnWijhS2kReN2BjgPQ9ALT5aZ891rmrH6cUbvX0ru+2qisjbawQn0MET6814GNA1DScy5nLqgeyvas46rVT3DhpiW49aj64XEJuOZcRK4khxyApku79lC2r4rZa/7FlE0vJzrZONpqdjsifc29MUwnDjkATYE8+cxe8yTTNy6y8vQziD38HpJjLkOEEzvivJXp/y4ITXs1smzLAAAAAElFTkSuQmCC" alt="varinull" class="vn-wordmark-img" />
+          </a>
+          <span class="vn-brand-sep"></span>
+          <div class="brand-badge" style="margin-bottom:0;">Scout #02 &bull; Private Self-Check on Your Computer</div>
+        </div>
+        <h1>Unofficial AI Usage &amp; Compliance Readiness Check</h1>
+        <p class="subtitle">
+          Combines a <strong>local project &amp; CSV check</strong> (scanning code package lists for AI libraries, <code>.env</code> key names, and exported app or vendor CSVs) with a <strong>plain-English questionnaire</strong> on how your team uses AI tools. Passwords and secret values after <code>=</code> are ignored in memory and never shown, saved, or uploaded.
+        </p>
+      </div>
+      <div class="top-actions no-print">
+        <button type="button" id="modeToggleBtn" style="display:none;" onclick="switchMode('production')">Switch to Blank Check</button>
+        <button type="button" onclick="toggleTheme()">Light / Dark</button>
+      </div>
+    </header>
+
+    <!-- Interactive Local Repo / Config / Export Navigator -->
+    <section class="card no-print" id="localScannerCard">
+      <h2>
+        <span>1. Check a Project or Export Folder on Your Computer <span class="pill-tag">Optional &bull; Read-Only</span></span>
+        <span class="status-note">Passwords &amp; secret values are ignored; only AI package and key names are listed</span>
+      </h2>
+      <p class="hint">
+        Choose a folder directly in your browser (or type a local folder path when running the local Python server) to spot AI code packages (<code>package.json</code>, <code>requirements.txt</code>, <code>pyproject.toml</code>), AI key names in <code>.env</code> files, coding-assistant configs, CSV exports, and policy docs.
+      </p>
+      <div class="scanner-bar">
+        <input type="text" id="localScanPath" placeholder="e.g. C:\Projects\my-org-repos" value="" />
+        <button type="button" class="primary" onclick="runServerDirectoryScan()">Scan Folder Path</button>
+        <label class="btn" for="browserFolderPicker">Choose Folder from Computer</label>
+        <input type="file" id="browserFolderPicker" webkitdirectory directory multiple style="display:none" onchange="runBrowserFolderScan(this.files)" />
+      </div>
+      <div id="scanStatusMsg" class="status-note"></div>
+
+      <div id="scanResultsContainer" style="display:none; margin-top:14px;">
+        <div class="metrics-row" id="scanMetricsRow"></div>
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div class="tabs" id="scanTabs">
+            <button type="button" class="tab-btn active" onclick="showScanTab('sdks', this)">AI Code Packages</button>
+            <button type="button" class="tab-btn" onclick="showScanTab('env', this)">AI Key Names (.env)</button>
+            <button type="button" class="tab-btn" onclick="showScanTab('agents', this)">Coding Assistant Configs</button>
+            <button type="button" class="tab-btn" onclick="showScanTab('policies', this)">Policy Docs &amp; CSVs</button>
+            <button type="button" class="tab-btn" onclick="showScanTab('folders', this)">By Subfolder</button>
+          </div>
+          <button type="button" class="primary" onclick="mergeScanIntoForm()">Use Scanned Findings in Questionnaire &darr;</button>
+        </div>
+        <div id="scanTabPanel" style="overflow-x:auto;"></div>
+      </div>
+    </section>
+
+    <!-- Main Assessment Form -->
+    <form id="assessmentForm" onsubmit="handleRunAssessment(event)">
+      <section class="card">
+        <h2>
+          <span>2. Company Context <span class="pill-tag ok">No Login Required, All Contact Fields Optional</span></span>
+        </h2>
+        <p class="hint">Leave name and email blank for private internal use. Fill them in only if you want them printed on an exported report.</p>
+        <div class="grid-3">
+          <div class="field">
+            <label for="company_name">Company / Team Name <span class="opt">(Optional)</span></label>
+            <input type="text" id="company_name" placeholder="Leave blank if desired" />
+          </div>
+          <div class="field">
+            <label for="industry">Industry</label>
+            <select id="industry">
+              <option value="general">General Business / Software / Tech</option>
+              <option value="healthcare_logistics">Healthcare, Life Sciences &amp; Logistics</option>
+              <option value="fintech_financial">Finance, Accounting &amp; Insurance</option>
+              <option value="manufacturing_supply">Manufacturing &amp; Supply Chain</option>
+              <option value="professional_services">Professional Services &amp; Agencies</option>
+              <option value="legal">Law Firm / Legal Team</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="team_size">Company Size</label>
+            <select id="team_size">
+              <option value="1-50">1–50 people</option>
+              <option value="50-250" selected>50–250 people</option>
+              <option value="250-1000">250–1,000 people</option>
+              <option value="1000+">1,000+ people</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="contact_name">Your Name <span class="opt">(Optional)</span></label>
+            <input type="text" id="contact_name" placeholder="Optional" />
+          </div>
+          <div class="field">
+            <label for="contact_email">Contact Email <span class="opt">(Optional)</span></label>
+            <input type="email" id="contact_email" placeholder="Optional, never required" />
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>3. How Your Team Uses AI Tools Today</h2>
+        <p class="hint">Select which teams use external AI tools and what rules or privacy settings you currently have in place.</p>
+
+        <div class="field" style="margin-bottom:16px;">
+          <label>Which teams paste documents, emails, code, or spreadsheets into external AI tools?</label>
+          <div class="check-grid">
+            <label class="check-pill"><input type="checkbox" name="dept" value="sales_cs" /> <span>Sales, Support &amp; Customer Success</span></label>
+            <label class="check-pill"><input type="checkbox" name="dept" value="legal_contracts" /> <span>Legal, Purchasing &amp; Contracts</span></label>
+            <label class="check-pill"><input type="checkbox" name="dept" value="engineering" /> <span>Engineering, Data &amp; IT</span></label>
+            <label class="check-pill"><input type="checkbox" name="dept" value="finance_ops" /> <span>Finance, Billing &amp; Operations</span></label>
+            <label class="check-pill"><input type="checkbox" name="dept" value="hr_recruiting" /> <span>HR &amp; Recruiting</span></label>
+            <label class="check-pill"><input type="checkbox" name="dept" value="marketing_product" /> <span>Product &amp; Marketing</span></label>
+          </div>
+        </div>
+
+        <div class="field" style="margin-bottom:16px;">
+          <label>How are people accessing AI tools right now?</label>
+          <div class="check-grid">
+            <label class="check-pill"><input type="checkbox" name="tier" value="free_consumer_accounts" /> <span>Personal or Free AI Accounts (ChatGPT, Claude, Gemini, etc.)</span></label>
+            <label class="check-pill"><input type="checkbox" name="tier" value="browser_extensions_oauth" /> <span>Browser Extensions or AI Meeting Notetakers</span></label>
+            <label class="check-pill"><input type="checkbox" name="tier" value="team_pro_unmanaged" /> <span>Team Plans Paid on Department Cards (Outside Central IT)</span></label>
+            <label class="check-pill"><input type="checkbox" name="tier" value="api_keys_in_repos" /> <span>Direct AI API Keys Inside Code Projects (<code>.env</code> Files)</span></label>
+            <label class="check-pill"><input type="checkbox" name="tier" value="enterprise_sso_zdr" /> <span>IT-Managed Business AI Accounts (Single Sign-On &amp; No Training)</span></label>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-bottom:16px;">
+          <div class="field">
+            <label for="zero_data_retention_enforced">Are AI Providers Blocked from Training on or Keeping Your Data?</label>
+            <select id="zero_data_retention_enforced">
+              <option value="unknown">Not sure / Not checked across all tools</option>
+              <option value="no">No, default consumer settings or 30-day provider storage active</option>
+              <option value="partial">Partially, turned on for one business AI account, not others</option>
+              <option value="yes_contractual">Yes, signed privacy agreements &amp; zero training on all AI tools</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="egress_or_sso_visibility">Can IT See Which AI Websites &amp; Connected Apps Staff Use?</label>
+            <select id="egress_or_sso_visibility">
+              <option value="none">No visibility into AI websites or connected Google/Microsoft apps</option>
+              <option value="partial_manual">Spot checks only (checking expense reports or asking teams)</option>
+              <option value="sso_logs_only">Google/Microsoft app logins reviewed, but browser AI sites are open</option>
+              <option value="full_casb_allowlist">Full visibility, approved AI list + central login and network logs</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="policy_and_signoff_status">Written AI Usage Policy &amp; Staff Sign-Off</label>
+            <select id="policy_and_signoff_status">
+              <option value="no_ai_policy">No written AI usage policy yet</option>
+              <option value="outdated_it_policy_only">Older general IT policy with no clear rules for AI tools</option>
+              <option value="draft_not_signed">Draft AI guidelines in an internal doc, no staff sign-off</option>
+              <option value="enforced_annual_signoff">Clear AI policy signed by staff at onboarding and yearly</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="client_contract_ai_restrictions">Have You Checked Customer Contracts for AI Restrictions?</label>
+            <select id="client_contract_ai_restrictions">
+              <option value="unknown_unscanned">Not checked, haven't reviewed client contracts for AI limits</option>
+              <option value="strict_bans_present_unmapped">Some clients ban or limit AI use, not mapped to our tools yet</option>
+              <option value="spot_checked">Spot-checked our largest customer contracts manually</option>
+              <option value="reviewed_and_enforced">Reviewed, tracked, and followed across customer projects</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Why Are You Checking Readiness? (Compliance &amp; Customer Drivers)</label>
+          <div class="check-grid">
+            <label class="check-pill"><input type="checkbox" name="driver" value="enterprise_security_questionnaires" /> <span>Customer Security Questionnaires (Enterprise Buyer Reviews)</span></label>
+            <label class="check-pill"><input type="checkbox" name="driver" value="soc2_iso27001" /> <span>SOC 2 or ISO 27001 / 42001 Security Audit</span></label>
+            <label class="check-pill"><input type="checkbox" name="driver" value="hipaa_baa" /> <span>Healthcare Privacy (HIPAA / BAA)</span></label>
+            <label class="check-pill"><input type="checkbox" name="driver" value="gdpr_ccpa_eu_ai_act" /> <span>Privacy &amp; AI Laws (GDPR, CCPA, or EU AI Act)</span></label>
+            <label class="check-pill"><input type="checkbox" name="driver" value="pci_finra" /> <span>Payment or Financial Rules (PCI-DSS / FINRA)</span></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>
+          <span>4. Optional: Connected Apps &amp; AI Vendor Lists (CSV)</span>
+          <span class="no-print" style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button type="button" onclick="downloadBlankTemplate('oauth')">Download Blank Apps CSV</button>
+            <button type="button" onclick="downloadBlankTemplate('vendor')">Download Blank Vendors CSV</button>
+          </span>
+        </h2>
+        <p class="hint">Paste or upload a CSV list of connected apps or AI vendors to sort them automatically into Approved Business Tools (Tier 1), Needs Review (Tier 2), or High-Risk Personal/Unchecked Tools (Tier 3).</p>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="oauth_tools_csv_text">
+              Connected Apps &amp; Staff AI Tools CSV
+              <span class="opt">(<input type="file" accept=".csv,text/csv" style="display:inline; width:auto; font-size:11px; padding:2px;" onchange="loadCsvFileInto(this, 'oauth_tools_csv_text')" />)</span>
+            </label>
+            <textarea id="oauth_tools_csv_text" placeholder="tool_name,domain,auth_method,department,account_tier,trains_on_data"></textarea>
+          </div>
+          <div class="field">
+            <label for="vendor_inventory_csv_text">
+              AI Vendors &amp; Models CSV
+              <span class="opt">(<input type="file" accept=".csv,text/csv" style="display:inline; width:auto; font-size:11px; padding:2px;" onchange="loadCsvFileInto(this, 'vendor_inventory_csv_text')" />)</span>
+            </label>
+            <textarea id="vendor_inventory_csv_text" placeholder="vendor_name,model_or_feature,zdr_enabled,baa_or_dpa_signed,logging_retained_days"></textarea>
+          </div>
+        </div>
+
+        <div class="no-print" style="margin-top:18px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="submit" class="primary" style="padding:11px 20px; font-size:14.5px;">Check My AI Governance Readiness</button>
+            <button type="button" onclick="resetBlankForm()">Clear Form</button>
+          </div>
+          <span id="evalEngineStatus" class="status-note">Runs right in your browser (no automatic uploads).</span>
+        </div>
+      </section>
+    </form>
+
+    <!-- Results Section -->
+    <section id="resultsSection">
+      <div class="card">
+        <h2>
+          <span id="resScoreLabel">AI Readiness Summary</span>
+          <span id="resSeverityBadge" class="pill-tag"></span>
+        </h2>
+        <p class="hint" id="resSubMeta"></p>
+        <p class="hint" style="margin-top:-4px;">
+          <strong>How score &amp; effort work:</strong> The 0–100 score adds up missing safeguards from your answers and any uploaded CSVs. Effort estimates assume <strong>up to 40 hrs/week</strong> of service: focused policy/app reviews fit in 1–3 weeks, while multi-department compliance rollouts require a 1-week triage followed by phased milestones.
+        </p>
+
+        <div class="metrics-row" id="resMetricsRow"></div>
+
+        <div id="resTierSection" style="display:none; margin-top:18px;">
+          <h3 style="font-size:15.5px; margin:0 0 8px;">AI Tools &amp; Vendors Grouped by Risk</h3>
+          <div id="resTierSummaryPills" style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;"></div>
+          <div id="resToolsTableWrap" style="overflow-x:auto;"></div>
+          <div id="resVendorsTableWrap" style="overflow-x:auto; margin-top:12px;"></div>
+        </div>
+
+        <div style="margin-top:22px;">
+          <h3 style="font-size:15.5px; margin:0 0 10px;">Key Gaps &amp; Recommended Fixes</h3>
+          <div id="resFindingsWrap"></div>
+        </div>
+
+        <div style="margin-top:22px;">
+          <h3 style="font-size:15.5px; margin:0 0 8px;">Step-by-Step AI Governance Checklist</h3>
+          <div style="overflow-x:auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:55px;">Step</th>
+                  <th style="width:210px;">Area</th>
+                  <th>Recommended Action</th>
+                  <th style="width:155px;">Status</th>
+                </tr>
+              </thead>
+              <tbody id="resChecklistBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Subtle, High-Trust Pull Card -->
+        <div class="pull-card">
+          <div style="flex: 1 1 360px; min-width: 0;">
+            <strong style="display:block; margin-bottom:4px;">Handling this internally? Use the checklist above freely.</strong>
+            <span class="status-note" style="font-size:13.5px;">
+              Want help cleaning up unofficial AI tools and preparing a buyer-ready policy pack (scoped to realistic 40-hr/week milestones based on your findings)? Export a Summary File (<code>varinull-capsule-sprint2.json</code>, counts and risk flags only) and email it to <a href="mailto:info@varinull.com?subject=Varinull%20Scout%20%2302%20Summary" style="color:var(--accent);">info@varinull.com</a> whenever you want VARINULL's help.
+            </span>
+          </div>
+          <div class="no-print" style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button type="button" class="primary" onclick="downloadCapsuleJson()">Export Summary File (<code>.json</code>)</button>
+            <button type="button" onclick="downloadMarkdownSummary()">Download Printable Report (<code>.md</code>)</button>
+            <button type="button" onclick="window.print()">Print / Save PDF</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const BLANK_OAUTH_CSV = "tool_name,domain,auth_method,department,account_tier,trains_on_data\n";
+    const BLANK_VENDOR_CSV = "vendor_name,model_or_feature,zdr_enabled,baa_or_dpa_signed,logging_retained_days\n";
+
+    // Embedded Demo Scenario (Apex Health & Logistics) so /demo and ?mode=demo work offline on file:// too
+    const DEMO_PAYLOAD = {
+      prospect: {
+        company_name: "Apex Health & Logistics",
+        contact_name: "Dana Mercer",
+        contact_email: "d.mercer@apexhealthlogistics.example",
+        industry: "healthcare_logistics",
+        team_size: "50-250"
+      },
+      inputs: {
+        departments_using_external_ai: ["sales_cs", "legal_contracts", "engineering", "finance_ops"],
+        account_tiers_in_use: ["free_consumer_accounts", "browser_extensions_oauth", "team_pro_unmanaged", "api_keys_in_repos"],
+        zero_data_retention_enforced: "no",
+        egress_or_sso_visibility: "none",
+        policy_and_signoff_status: "outdated_it_policy_only",
+        compliance_drivers: ["enterprise_security_questionnaires", "soc2_iso27001", "hipaa_baa", "gdpr_ccpa_eu_ai_act"],
+        client_contract_ai_restrictions: "unknown_unscanned",
+        oauth_tools_csv_text:
+          "tool_name,domain,auth_method,department,account_tier,trains_on_data\n" +
+          "ChatGPT Personal Accounts,chatgpt.com,personal_email,finance_ops,free_consumer,yes\n" +
+          "Claude Consumer Web,claude.ai,google_oauth_unreviewed,legal_contracts,free_consumer,yes\n" +
+          "WriteMate Chrome Extension,writemate-ai.io,chrome_oauth_extension,sales_cs,browser_extension,yes\n" +
+          "TabSummarize PDF Sidekick,tabsummarize.app,chrome_oauth_extension,finance_ops,browser_extension,unknown\n" +
+          "MeetScribe Auto-Recorder,meetscribe.ai,google_oauth_extension,sales_cs,browser_extension,yes\n" +
+          "PromptPilot Gmail Helper,promptpilot.co,chrome_oauth_extension,sales_cs,browser_extension,yes\n" +
+          "DocuLens Claims Assistant,doculens-ext.io,chrome_oauth_extension,finance_ops,browser_extension,unknown\n" +
+          "Cursor Team Unmanaged,cursor.com,github_oauth,engineering,team_pro_unmanaged,unknown\n" +
+          "Azure OpenAI Internal Pilot,openai.azure.com,entra_sso,engineering,enterprise_zdr,no\n",
+        vendor_inventory_csv_text:
+          "vendor_name,model_or_feature,zdr_enabled,baa_or_dpa_signed,logging_retained_days\n" +
+          "OpenAI Direct API (Shared Repo Key),gpt-4o,no,no,0\n" +
+          "Anthropic Self-Serve Team,claude-3-5-sonnet,no,no,0\n" +
+          "MeetScribe Cloud Transcription,whisper-summary-v2,no,no,0\n" +
+          "Cursor Business Trial,claude-sonnet-codegen,yes,no,7\n" +
+          "Microsoft Azure OpenAI,gpt-4o-enterprise,yes,yes,365\n"
+      }
+    };
+
+    let currentMode = "production";
+    let lastCapsule = null;
+    let lastScanResult = null;
+    let currentScanTab = "sdks";
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.setAttribute("data-theme", html.getAttribute("data-theme") === "dark" ? "light" : "dark");
+    }
+
+    function escHtml(str) {
+      return String(str ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    // --- CSV Parser & Exact Parity Standalone Evaluator (matches engine.py 1:1) ---
+    function parseCsvLine(line) {
+      const out = [];
+      let cur = "";
+      let inQuotes = false;
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        if (ch === '"') {
+          if (inQuotes && line[i + 1] === '"') { cur += '"'; i++; }
+          else { inQuotes = !inQuotes; }
+        } else if (ch === "," && !inQuotes) {
+          out.push(cur.trim());
+          cur = "";
+        } else {
+          cur += ch;
+        }
+      }
+      out.push(cur.trim());
+      return out;
+    }
+
+    function parseCsvRows(csvText) {
+      if (!csvText || !String(csvText).trim()) return [];
+      const lines = String(csvText)
+        .split(/\r?\n/)
+        .map(l => l.trim())
+        .filter(l => l && !l.startsWith("#"));
+      if (lines.length < 2) return [];
+      const headers = parseCsvLine(lines[0]).map(h => h.toLowerCase());
+      const rows = [];
+      for (let i = 1; i < lines.length; i++) {
+        const vals = parseCsvLine(lines[i]);
+        const obj = {};
+        let nonEmpty = false;
+        headers.forEach((h, idx) => {
+          const v = (vals[idx] ?? "").trim();
+          if (v) nonEmpty = true;
+          obj[h] = v;
+        });
+        if (nonEmpty) rows.push(obj);
+      }
+      return rows;
+    }
+
+    function classifyOauthToolsJS(csvText) {
+      const rows = parseCsvRows(csvText);
+      const out = [];
+      for (const r of rows) {
+        const tool_name = (r.tool_name || "").trim();
+        if (!tool_name) continue;
+        const domain = (r.domain || "").trim();
+        const auth_method = (r.auth_method || "").trim();
+        const department = (r.department || "").trim() || "unspecified";
+        const account_tier = (r.account_tier || "").trim() || "unspecified";
+        const trains_on_data = (r.trains_on_data || "").trim() || "unknown";
+
+        const tierL = account_tier.toLowerCase();
+        const authL = auth_method.toLowerCase();
+        const trainsL = trains_on_data.toLowerCase();
+
+        const isTier3 =
+          ["yes", "true", "1", "default_opt_in"].includes(trainsL) ||
+          ["free", "consumer", "personal", "extension", "unreviewed", "shadow"].some(
+            kw => tierL.includes(kw) || authL.includes(kw)
+          );
+        const isTier1 =
+          !isTier3 &&
+          ["no", "false", "0", "opt_out", "zdr"].includes(trainsL) &&
+          ["enterprise", "zdr", "vpc", "bedrock", "vertex", "azure"].some(kw => tierL.includes(kw)) &&
+          ["sso", "saml", "oidc", "entra", "okta", "scim"].some(kw => authL.includes(kw));
+
+        let risk_tier = "TIER_2";
+        let risk_label = "Tier 2, Conditional / Review Required";
+        let rationale = "Unmanaged team account, non-SSO OAuth, or unverified training opt-out.";
+        if (isTier3) {
+          risk_tier = "TIER_3";
+          risk_label = "Tier 3, High-Risk Consumer / Unreviewed Extension";
+          rationale = "Consumer tier, unreviewed browser OAuth extension, or model training enabled.";
+        } else if (isTier1) {
+          risk_tier = "TIER_1";
+          risk_label = "Tier 1, Approved Enterprise ZDR";
+          rationale = "SSO-governed enterprise tier with model training disabled / ZDR.";
+        }
+        out.push({ tool_name, domain, auth_method, department, account_tier, trains_on_data, risk_tier, risk_label, rationale });
+      }
+      return out;
+    }
+
+    function classifyVendorModelsJS(csvText) {
+      const rows = parseCsvRows(csvText);
+      const out = [];
+      for (const r of rows) {
+        const vendor_name = (r.vendor_name || "").trim();
+        if (!vendor_name) continue;
+        const model_or_feature = (r.model_or_feature || "").trim() || "unspecified";
+        const zdr_enabled = (r.zdr_enabled || "").trim() || "unknown";
+        const baa_or_dpa_signed = (r.baa_or_dpa_signed || "").trim() || "unknown";
+        const parsedDays = parseInt(r.logging_retained_days || "0", 10);
+        const logging_retained_days = Number.isFinite(parsedDays) ? parsedDays : 0;
+
+        const zdrL = zdr_enabled.toLowerCase();
+        const dpaL = baa_or_dpa_signed.toLowerCase();
+        const zdrOk = ["yes", "true", "1"].includes(zdrL);
+        const dpaOk = ["yes", "true", "1"].includes(dpaL);
+
+        const gaps = [];
+        if (!zdrOk) gaps.push("ZDR not enforced");
+        if (!dpaOk) gaps.push("Missing signed DPA/BAA");
+        if (logging_retained_days < 30) gaps.push(`Audit log retention too short (${logging_retained_days}d < 30d)`);
+
+        let risk_tier = "TIER_2";
+        let risk_label = "Tier 2, Conditional / Controls Incomplete";
+        if (["no", "false", "0"].includes(zdrL) || (!zdrOk && ["no", "false", "0"].includes(dpaL))) {
+          risk_tier = "TIER_3";
+          risk_label = "Tier 3, High-Risk Uncovered Endpoint";
+        } else if (zdrOk && dpaOk && logging_retained_days >= 90) {
+          risk_tier = "TIER_1";
+          risk_label = "Tier 1, Approved Enterprise ZDR";
+        }
+        out.push({ vendor_name, model_or_feature, zdr_enabled, baa_or_dpa_signed, logging_retained_days, risk_tier, risk_label, gaps });
+      }
+      return out;
+    }
+
+    function evaluateIntakeJS(payload, mode = "production") {
+      const p = payload.prospect || {};
+      const inp = payload.inputs || {};
+
+      const company_name = (p.company_name || "").trim() || "Local Workspace (Anonymous)";
+      const contact_name = (p.contact_name || "").trim();
+      const contact_email = (p.contact_email || "").trim();
+      const industry = (p.industry || "general").trim() || "general";
+      const team_size = (p.team_size || "50-250").trim() || "50-250";
+
+      const depts = (inp.departments_using_external_ai || []).filter(Boolean);
+      const tiers = (inp.account_tiers_in_use || []).filter(Boolean);
+      const zdr_status = inp.zero_data_retention_enforced || "unknown";
+      const egress_vis = inp.egress_or_sso_visibility || "none";
+      const policy_status = inp.policy_and_signoff_status || "no_ai_policy";
+      const drivers = (inp.compliance_drivers || []).filter(Boolean);
+      const contract_status = inp.client_contract_ai_restrictions || "unknown_unscanned";
+      const oauth_csv = inp.oauth_tools_csv_text || "";
+      const vendor_csv = inp.vendor_inventory_csv_text || "";
+
+      const classifiedTools = classifyOauthToolsJS(oauth_csv);
+      const classifiedVendors = classifyVendorModelsJS(vendor_csv);
+
+      const tier3Tools = classifiedTools.filter(t => t.risk_tier === "TIER_3");
+      const tier2Tools = classifiedTools.filter(t => t.risk_tier === "TIER_2");
+      const tier1Tools = classifiedTools.filter(t => t.risk_tier === "TIER_1");
+
+      const tier3Vendors = classifiedVendors.filter(v => v.risk_tier === "TIER_3");
+      const tier2Vendors = classifiedVendors.filter(v => v.risk_tier === "TIER_2");
+      const tier1Vendors = classifiedVendors.filter(v => v.risk_tier === "TIER_1");
+
+      const tier3Total = tier3Tools.length + tier3Vendors.length;
+      const tier2Total = tier2Tools.length + tier2Vendors.length;
+      const tier1Total = tier1Tools.length + tier1Vendors.length;
+
+      const hasCsvInventory = classifiedTools.length > 0 || classifiedVendors.length > 0;
+      const flaggedDisplay = hasCsvInventory ? String(tier3Total) : "Not Scanned (No CSV)";
+
+      let gapCount = 0;
+      if (zdr_status !== "yes_contractual") gapCount += 1;
+      if (["none", "partial_manual"].includes(egress_vis)) gapCount += 1;
+      if (policy_status !== "enforced_annual_signoff") gapCount += 1;
+      if (["unknown_unscanned", "strict_bans_present_unmapped"].includes(contract_status)) gapCount += 1;
+      const vendorGapVendors = classifiedVendors.filter(v => v.gaps.length > 0);
+      gapCount += vendorGapVendors.length;
+
+      const tierWeights = { free_consumer_accounts: 8, browser_extensions_oauth: 5, team_pro_unmanaged: 4, api_keys_in_repos: 7, enterprise_sso_zdr: 0 };
+      const deptWeights = { legal_contracts: 3, finance_ops: 3, engineering: 3, sales_cs: 3, hr_recruiting: 2, marketing_product: 2 };
+      const zdrWeights = { no: 16, unknown: 13, partial: 7, yes_contractual: 0 };
+      const egressWeights = { none: 14, partial_manual: 9, sso_logs_only: 4, full_casb_allowlist: 0 };
+      const policyWeights = { no_ai_policy: 12, outdated_it_policy_only: 10, draft_not_signed: 5, enforced_annual_signoff: 0 };
+      const driverWeights = { hipaa_baa: 3, gdpr_ccpa_eu_ai_act: 3, enterprise_security_questionnaires: 2, soc2_iso27001: 2, pci_finra: 3 };
+      const contractWeights = { strict_bans_present_unmapped: 6, unknown_unscanned: 5, spot_checked: 2, reviewed_and_enforced: 0 };
+
+      const uniq = arr => Array.from(new Set(arr));
+      const ptsTiers = Math.min(20, uniq(tiers).reduce((s, t) => s + (tierWeights[t] ?? 0), 0));
+      const ptsDepts = Math.min(12, uniq(depts).reduce((s, d) => s + (deptWeights[d] ?? 0), 0));
+      const ptsZdr = zdrWeights[zdr_status] ?? 13;
+      const ptsEgress = egressWeights[egress_vis] ?? 9;
+      const ptsPolicy = policyWeights[policy_status] ?? 10;
+      const ptsDrivers = Math.min(10, uniq(drivers).reduce((s, c) => s + (driverWeights[c] ?? 0), 0));
+      const ptsContracts = contractWeights[contract_status] ?? 5;
+      const ptsCsv = Math.min(10, tier3Total * 2 + tier2Total * 1);
+
+      const headline_score = Math.max(5, Math.min(100, ptsTiers + ptsDepts + ptsZdr + ptsEgress + ptsPolicy + ptsDrivers + ptsContracts + ptsCsv));
+
+      const heavyRegs = uniq(drivers).filter(d => ["soc2_iso27001", "hipaa_baa", "gdpr_ccpa_eu_ai_act", "pci_finra"].includes(d)).length;
+      let sprint_days = "1-2 Weeks · ~30-60 hrs (at 40 hrs/wk)";
+      if (headline_score >= 80 || (headline_score >= 65 && uniq(depts).length >= 4 && heavyRegs >= 2)) {
+        sprint_days = "5-7 Weeks (Phased) · Phase 1: 1-Week Triage · Phase 2: 4-6 Weeks (~160-240 hrs at 40 hrs/wk)";
+      } else if (headline_score >= 55 || heavyRegs >= 2) {
+        sprint_days = "3-5 Weeks · ~120-200 hrs (at 40 hrs/wk)";
+      } else if (headline_score >= 30) {
+        sprint_days = "2-3 Weeks · ~80-120 hrs (at 40 hrs/wk)";
+      }
+
+      let severity_tier = "LOW";
+      let score_label = `Low Checklist Exposure (${headline_score}/100 Checklist Score)`;
+      if (headline_score >= 80) {
+        severity_tier = "CRITICAL";
+        score_label = `High Priority Gaps (${headline_score}/100 Checklist Score)`;
+      } else if (headline_score >= 55) {
+        severity_tier = "HIGH";
+        score_label = `Notable Governance Gaps (${headline_score}/100 Checklist Score)`;
+      } else if (headline_score >= 30) {
+        severity_tier = "MODERATE";
+        score_label = `Moderate Governance Gaps (${headline_score}/100 Checklist Score)`;
+      }
+
+      const findings = [];
+      if (tiers.includes("free_consumer_accounts") || tiers.includes("browser_extensions_oauth") || tier3Tools.length > 0) {
+        const extCount = classifiedTools.filter(t => t.account_tier.toLowerCase().includes("extension") || t.auth_method.toLowerCase().includes("extension")).length;
+        const toolExamples = tier3Tools.slice(0, 4).map(t => t.tool_name).join(", ");
+        let detail = `Employees across ${Math.max(1, depts.length)} department(s) are using consumer AI accounts or unreviewed OAuth tools.`;
+        if (tier3Tools.length > 0) {
+          detail += ` CSV audit flagged ${tier3Tools.length} Tier-3 tool(s) (${toolExamples})` + (extCount ? `, including ${extCount} browser OAuth extension(s).` : ".");
+        }
+        findings.push({
+          id: "SA-01",
+          severity: (tier3Tools.length >= 3 || tiers.includes("free_consumer_accounts")) ? "CRITICAL" : "HIGH",
+          title: "Personal AI Accounts or Unchecked Browser Extensions in Use",
+          detail,
+          client_next_step: "Review connected Google/Microsoft apps, remove unapproved browser extensions, and move teams onto an IT-managed business AI account."
+        });
+      }
+
+      if (zdr_status !== "yes_contractual" || tier3Vendors.length > 0) {
+        const uncoveredNames = [...tier3Vendors, ...tier2Vendors].slice(0, 3).map(v => v.vendor_name).join(", ");
+        findings.push({
+          id: "SA-02",
+          severity: zdr_status === "no" ? "CRITICAL" : "HIGH",
+          title: "AI Providers May Retain or Train on Company Data",
+          detail: `Data-retention protection is marked '${zdr_status}'` + (uncoveredNames ? `, and your vendor list includes tools without full privacy agreements (${uncoveredNames}). ` : ". ") + "Prompts containing customer info, contracts, or code may be stored by providers or used for model training.",
+          client_next_step: "Sign business privacy agreements (with model training turned off) and replace personal or self-serve API keys that lack privacy terms."
+        });
+      }
+
+      if (["none", "partial_manual"].includes(egress_vis) || vendorGapVendors.length > 0) {
+        findings.push({
+          id: "SA-03",
+          severity: egress_vis === "none" ? "HIGH" : "MODERATE",
+          title: "Limited Visibility into Which AI Websites & Apps Staff Use",
+          detail: `Visibility is marked '${egress_vis}', making it hard to see which external AI tools receive company data or answer audit questions.`,
+          client_next_step: "Keep a clear approved-AI list and enable central login or network logs so IT can review connected AI apps."
+        });
+      }
+
+      if (policy_status !== "enforced_annual_signoff" || drivers.length > 0) {
+        const driverList = drivers.length ? drivers.join(", ") : "upcoming customer security reviews";
+        findings.push({
+          id: "SA-04",
+          severity: ["no_ai_policy", "outdated_it_policy_only"].includes(policy_status) ? "HIGH" : "MODERATE",
+          title: "AI Usage Policy & Customer Security Questionnaire Gap",
+          detail: `Policy status is '${policy_status}' while preparing for (${driverList}). Enterprise buyers and auditors increasingly ask for a signed staff AI policy and human-review rules.`,
+          client_next_step: "Publish a short, clear AI Usage Policy (what staff can and cannot paste into AI) with employee sign-off and standard security-questionnaire answers."
+        });
+      }
+
+      if (tiers.includes("api_keys_in_repos") || ["unknown_unscanned", "strict_bans_present_unmapped"].includes(contract_status)) {
+        findings.push({
+          id: "SA-05",
+          severity: tiers.includes("api_keys_in_repos") ? "HIGH" : "MODERATE",
+          title: "Shared AI Keys in Code Projects or Unchecked Client Contract Limits",
+          detail: `Client contract AI review status is '${contract_status}'` + (tiers.includes("api_keys_in_repos") ? " and direct AI API keys live inside code folders or `.env` files without central tracking." : "."),
+          client_next_step: "Move shared `.env` API keys into a managed secret store and check customer contracts for clauses that restrict external AI tools."
+        });
+      }
+
+      if (!findings.length) {
+        findings.push({
+          id: "SA-00",
+          severity: "LOW",
+          title: "Core AI Governance Safeguards Are in Place",
+          detail: "Managed logins, no-training privacy terms, staff policy sign-offs, and app visibility are active.",
+          client_next_step: "Review connected Google/Microsoft apps quarterly and keep your security-questionnaire answers up to date."
+        });
+      }
+
+      const checklist = [
+        {
+          step: 1,
+          category: "Connected Apps",
+          item: "Export connected Google Workspace / Microsoft apps and browser extensions; remove unapproved personal AI add-ons.",
+          status: (tiers.includes("browser_extensions_oauth") || tiers.includes("free_consumer_accounts") || tier3Tools.length > 0) ? "ACTION_REQUIRED" : "VERIFIED"
+        },
+        {
+          step: 2,
+          category: "Privacy & No-Training Terms",
+          item: "Confirm signed business privacy agreements (with model training disabled) on every AI tool used for work.",
+          status: (zdr_status !== "yes_contractual" || tier3Vendors.length > 0 || tier2Vendors.length > 0) ? "ACTION_REQUIRED" : "VERIFIED"
+        },
+        {
+          step: 3,
+          category: "App & Usage Logs",
+          item: "Maintain an approved AI tools list and keep central logs for audits and customer reviews.",
+          status: (egress_vis !== "full_casb_allowlist" || vendorGapVendors.length > 0) ? "ACTION_REQUIRED" : "VERIFIED"
+        },
+        {
+          step: 4,
+          category: "API Keys in Code",
+          item: "Check code folders and `.env` files for shared OpenAI/Anthropic/Gemini keys and move them to managed secrets.",
+          status: tiers.includes("api_keys_in_repos") ? "ACTION_REQUIRED" : "REVIEW_RECOMMENDED"
+        },
+        {
+          step: 5,
+          category: "Staff AI Policy",
+          item: "Share a clear 1-page AI Usage Policy (listing what private data must never be pasted into AI) with staff sign-off.",
+          status: policy_status !== "enforced_annual_signoff" ? "ACTION_REQUIRED" : "VERIFIED"
+        },
+        {
+          step: 6,
+          category: "Client Contracts & Audits",
+          item: "Check customer contracts for AI restrictions and keep ready-to-send answers for buyer security questionnaires.",
+          status: (contract_status !== "reviewed_and_enforced" || drivers.includes("enterprise_security_questionnaires")) ? "ACTION_REQUIRED" : "VERIFIED"
+        }
+      ];
+
+      const routing_signals = [];
+      if (tiers.includes("free_consumer_accounts") || tiers.includes("browser_extensions_oauth") || tiers.includes("team_pro_unmanaged") || egress_vis !== "full_casb_allowlist" || tier3Tools.length > 0 || tier2Tools.length > 0) {
+        routing_signals.push("shadow_ai_unapproved_tools");
+      }
+      if (policy_status !== "enforced_annual_signoff" || drivers.length > 0 || ["unknown_unscanned", "strict_bans_present_unmapped", "spot_checked"].includes(contract_status)) {
+        routing_signals.push("regulatory_or_policy_drift");
+      }
+      if (zdr_status !== "yes_contractual" || ["none", "partial_manual"].includes(egress_vis) || vendorGapVendors.length > 0) {
+        routing_signals.push("audit_logging_or_retention_gap");
+      }
+      if (tiers.includes("api_keys_in_repos") || (["finance_ops", "hr_recruiting", "sales_cs", "legal_contracts"].some(d => depts.includes(d)) && ["no", "unknown"].includes(zdr_status)) || (["hipaa_baa", "pci_finra"].some(c => drivers.includes(c)) && zdr_status !== "yes_contractual")) {
+        routing_signals.push("unclassified_pii_or_secrets");
+      }
+      if (["legal_contracts", "finance_ops"].some(d => depts.includes(d)) || ["unknown_unscanned", "strict_bans_present_unmapped"].includes(contract_status)) {
+        routing_signals.push("unstructured_pdf_or_doc_intake");
+      }
+      if (["sso_logs_only", "partial_manual"].includes(egress_vis) && (classifiedTools.length + classifiedVendors.length) >= 4) {
+        routing_signals.push("multi_cloud_config_or_telemetry_sprawl");
+      }
+
+      const capsule = {
+        capsule_version: "1.0",
+        niche_id: 2,
+        niche_slug: "sprint-2-shadow-ai-audit",
+        niche_title: "Shadow-AI & Compliance Readiness Audit (Typically 2-3 Weeks)",
+        mode: mode === "demo" ? "demo" : "production",
+        generated_at: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"),
+        prospect: { company_name, contact_name, contact_email, industry, team_size },
+        inputs: {
+          departments_using_external_ai: depts,
+          account_tiers_in_use: tiers,
+          zero_data_retention_enforced: zdr_status,
+          egress_or_sso_visibility: egress_vis,
+          policy_and_signoff_status: policy_status,
+          compliance_drivers: drivers,
+          client_contract_ai_restrictions: contract_status,
+          oauth_tools_csv_text: oauth_csv,
+          vendor_inventory_csv_text: vendor_csv
+        },
+        client_assessment: {
+          headline_score,
+          score_label,
+          severity_tier,
+          estimated_sprint_days: sprint_days,
+          key_metrics: [
+            { label: "Checklist Score", value: `${headline_score} / 100` },
+            { label: "High-Risk Tools (from CSV)", value: flaggedDisplay },
+            { label: "Policy & Visibility Gaps", value: String(gapCount) },
+            { label: "Estimated Effort", value: sprint_days }
+          ],
+          vendor_tier_breakdown: {
+            tier_1_approved_count: tier1Total,
+            tier_2_conditional_count: tier2Total,
+            tier_3_high_risk_count: tier3Total,
+            classified_oauth_tools: classifiedTools,
+            classified_vendors: classifiedVendors
+          },
+          top_findings: findings,
+          safe_to_deploy_checklist: checklist
+        },
+        routing_signals
+      };
+      if (payload.local_scan_metadata) {
+        capsule.local_scan_metadata = payload.local_scan_metadata;
+      }
+      return capsule;
+    }
+
+    // --- Form Read / Populate ---
+    function collectFormPayload() {
+      const checked = name => Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(el => el.value);
+      const payload = {
+        prospect: {
+          company_name: document.getElementById("company_name").value,
+          contact_name: document.getElementById("contact_name").value,
+          contact_email: document.getElementById("contact_email").value,
+          industry: document.getElementById("industry").value,
+          team_size: document.getElementById("team_size").value
+        },
+        inputs: {
+          departments_using_external_ai: checked("dept"),
+          account_tiers_in_use: checked("tier"),
+          zero_data_retention_enforced: document.getElementById("zero_data_retention_enforced").value,
+          egress_or_sso_visibility: document.getElementById("egress_or_sso_visibility").value,
+          policy_and_signoff_status: document.getElementById("policy_and_signoff_status").value,
+          compliance_drivers: checked("driver"),
+          client_contract_ai_restrictions: document.getElementById("client_contract_ai_restrictions").value,
+          oauth_tools_csv_text: document.getElementById("oauth_tools_csv_text").value,
+          vendor_inventory_csv_text: document.getElementById("vendor_inventory_csv_text").value
+        }
+      };
+      if (lastScanResult) {
+        payload.local_scan_metadata = {
+          scanned_root: lastScanResult.scanned_root,
+          counts: lastScanResult.counts
+        };
+      }
+      return payload;
+    }
+
+    function populateForm(payload) {
+      const p = payload.prospect || {};
+      const inp = payload.inputs || {};
+      document.getElementById("company_name").value = p.company_name || "";
+      document.getElementById("contact_name").value = p.contact_name || "";
+      document.getElementById("contact_email").value = p.contact_email || "";
+      document.getElementById("industry").value = p.industry || "general";
+      document.getElementById("team_size").value = p.team_size || "50-250";
+
+      const setChecks = (name, vals) => {
+        const set = new Set(vals || []);
+        document.querySelectorAll(`input[name="${name}"]`).forEach(el => { el.checked = set.has(el.value); });
+      };
+      setChecks("dept", inp.departments_using_external_ai);
+      setChecks("tier", inp.account_tiers_in_use);
+      setChecks("driver", inp.compliance_drivers);
+
+      document.getElementById("zero_data_retention_enforced").value = inp.zero_data_retention_enforced || "unknown";
+      document.getElementById("egress_or_sso_visibility").value = inp.egress_or_sso_visibility || "none";
+      document.getElementById("policy_and_signoff_status").value = inp.policy_and_signoff_status || "no_ai_policy";
+      document.getElementById("client_contract_ai_restrictions").value = inp.client_contract_ai_restrictions || "unknown_unscanned";
+      document.getElementById("oauth_tools_csv_text").value = inp.oauth_tools_csv_text || "";
+      document.getElementById("vendor_inventory_csv_text").value = inp.vendor_inventory_csv_text || "";
+    }
+
+    function resetBlankForm() {
+      populateForm({
+        prospect: { company_name: "", contact_name: "", contact_email: "", industry: "general", team_size: "50-250" },
+        inputs: {
+          departments_using_external_ai: [],
+          account_tiers_in_use: [],
+          zero_data_retention_enforced: "unknown",
+          egress_or_sso_visibility: "none",
+          policy_and_signoff_status: "no_ai_policy",
+          compliance_drivers: [],
+          client_contract_ai_restrictions: "unknown_unscanned",
+          oauth_tools_csv_text: "",
+          vendor_inventory_csv_text: ""
+        }
+      });
+      document.getElementById("resultsSection").classList.remove("visible");
+      lastCapsule = null;
+    }
+
+    async function handleRunAssessment(ev) {
+      if (ev) ev.preventDefault();
+      const payload = collectFormPayload();
+      let capsule = evaluateIntakeJS(payload, currentMode);
+      const statusEl = document.getElementById("evalEngineStatus");
+
+      if (window.location.protocol.startsWith("http")) {
+        try {
+          const resp = await fetch(`/api/assess?mode=${encodeURIComponent(currentMode)}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+          if (resp.ok) {
+            capsule = await resp.json();
+            statusEl.textContent = currentMode === "demo"
+              ? "Evaluated via local FastAPI engine (Demo mode, not saved to production DB)."
+              : "Evaluated on your localhost (127.0.0.1) & saved to local workspace ledger.";
+          }
+        } catch (_err) {
+          statusEl.textContent = "Evaluated 100% offline in browser (standalone JS engine).";
+        }
+      } else {
+        statusEl.textContent = "Evaluated 100% offline in browser (standalone file:// mode).";
+      }
+
+      lastCapsule = capsule;
+      renderResults(capsule);
+    }
+
+    function tierPillClass(tier) {
+      if (tier === "TIER_1" || tier === "LOW" || tier === "VERIFIED") return "ok";
+      if (tier === "TIER_2" || tier === "MODERATE" || tier === "REVIEW_RECOMMENDED") return "warn";
+      return "crit";
+    }
+
+    function renderResults(capsule) {
+      const ca = capsule.client_assessment || {};
+      const p = capsule.prospect || {};
+      const sec = document.getElementById("resultsSection");
+      sec.classList.add("visible");
+
+      document.getElementById("resScoreLabel").textContent = ca.score_label || "Governance Readiness Snapshot";
+      const badge = document.getElementById("resSeverityBadge");
+      badge.className = `pill-tag ${tierPillClass(ca.severity_tier)}`;
+      badge.textContent = `${ca.severity_tier} EXPOSURE`;
+
+      document.getElementById("resSubMeta").textContent =
+        `Workspace: ${p.company_name || "Local Workspace"} • Industry: ${p.industry || "general"} • Generated: ${capsule.generated_at}`;
+
+      document.getElementById("resMetricsRow").innerHTML = (ca.key_metrics || []).map(m => {
+        const parts = String(m.value ?? "").split(" · ");
+        const head = parts[0] || "";
+        const subs = parts.slice(1);
+        const isText = head.length > 11 || /^[A-Za-z]/.test(head);
+        return `
+        <div class="metric-box">
+          <div class="m-label">${escHtml(m.label)}</div>
+          <div class="m-val${isText ? " is-text" : ""}">${escHtml(head)}</div>
+          ${subs.length ? `<div class="m-sub">${subs.map(s => `<div>${escHtml(s)}</div>`).join("")}</div>` : ""}
+        </div>
+        `;
+      }).join("");
+
+      const bd = ca.vendor_tier_breakdown || {};
+      const tools = bd.classified_oauth_tools || [];
+      const vendors = bd.classified_vendors || [];
+      const tierSec = document.getElementById("resTierSection");
+      if (tools.length || vendors.length) {
+        tierSec.style.display = "block";
+        document.getElementById("resTierSummaryPills").innerHTML = `
+          <span class="pill-tag ok">Tier 1 Approved Enterprise ZDR: ${bd.tier_1_approved_count || 0}</span>
+          <span class="pill-tag warn">Tier 2 Conditional / Review: ${bd.tier_2_conditional_count || 0}</span>
+          <span class="pill-tag crit">Tier 3 High-Risk Consumer / Uncovered: ${bd.tier_3_high_risk_count || 0}</span>
+        `;
+        document.getElementById("resToolsTableWrap").innerHTML = tools.length ? `
+          <table>
+            <thead><tr><th>OAuth App / AI Tool</th><th>Auth Method</th><th>Dept</th><th>Account Tier</th><th>Trains on Data</th><th>Classification</th></tr></thead>
+            <tbody>
+              ${tools.map(t => `
+                <tr>
+                  <td><strong>${escHtml(t.tool_name)}</strong><br/><span class="status-note">${escHtml(t.domain)}</span></td>
+                  <td><code>${escHtml(t.auth_method)}</code></td>
+                  <td>${escHtml(t.department)}</td>
+                  <td><code>${escHtml(t.account_tier)}</code></td>
+                  <td>${escHtml(t.trains_on_data)}</td>
+                  <td><span class="pill-tag ${tierPillClass(t.risk_tier)}">${escHtml(t.risk_label)}</span></td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        ` : "";
+
+        document.getElementById("resVendorsTableWrap").innerHTML = vendors.length ? `
+          <table>
+            <thead><tr><th>AI Vendor</th><th>Model / Feature</th><th>ZDR</th><th>DPA / BAA</th><th>Log Retention</th><th>Classification &amp; Gaps</th></tr></thead>
+            <tbody>
+              ${vendors.map(v => `
+                <tr>
+                  <td><strong>${escHtml(v.vendor_name)}</strong></td>
+                  <td><code>${escHtml(v.model_or_feature)}</code></td>
+                  <td>${escHtml(v.zdr_enabled)}</td>
+                  <td>${escHtml(v.baa_or_dpa_signed)}</td>
+                  <td>${escHtml(v.logging_retained_days)} days</td>
+                  <td>
+                    <span class="pill-tag ${tierPillClass(v.risk_tier)}">${escHtml(v.risk_label)}</span>
+                    ${v.gaps && v.gaps.length ? `<div class="status-note" style="margin-top:4px;">${escHtml(v.gaps.join(" • "))}</div>` : ""}
+                  </td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        ` : "";
+      } else {
+        tierSec.style.display = "none";
+      }
+
+      document.getElementById("resFindingsWrap").innerHTML = (ca.top_findings || []).map(f => `
+        <div class="finding-item">
+          <div class="finding-head">
+            <span class="pill-tag ${tierPillClass(f.severity)}">${escHtml(f.id)} &bull; ${escHtml(f.severity)}</span>
+            <span>${escHtml(f.title)}</span>
+          </div>
+          <div style="font-size:13.5px; margin-bottom:6px;">${escHtml(f.detail)}</div>
+          <div class="status-note"><strong>Next Step:</strong> ${escHtml(f.client_next_step)}</div>
+        </div>
+      `).join("");
+
+      document.getElementById("resChecklistBody").innerHTML = (ca.safe_to_deploy_checklist || []).map(c => `
+        <tr>
+          <td><strong>#${escHtml(c.step)}</strong></td>
+          <td>${escHtml(c.category)}</td>
+          <td>${escHtml(c.item)}</td>
+          <td><span class="pill-tag ${tierPillClass(c.status)}">${escHtml(c.status)}</span></td>
+        </tr>
+      `).join("");
+
+      sec.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+
+    // --- Interactive Local Directory Scanner (Server 127.0.0.1 + Browser Offline Fallback) ---
+    async function runServerDirectoryScan() {
+      const targetPath = document.getElementById("localScanPath").value.trim() || ".";
+      const msgEl = document.getElementById("scanStatusMsg");
+      if (!window.location.protocol.startsWith("http")) {
+        msgEl.textContent = "Opened via file://, use 'Browse Folder Offline' next to this button, or start python app.py on 127.0.0.1:9102.";
+        return;
+      }
+      msgEl.textContent = `Scanning '${targetPath}' locally (read-only, secret values redacted)...`;
+      try {
+        const resp = await fetch("/api/scan-local", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ path: targetPath })
+        });
+        const data = await resp.json();
+        if (!resp.ok) {
+          msgEl.textContent = `Scan error: ${data.detail || resp.statusText}`;
+          return;
+        }
+        lastScanResult = data;
+        msgEl.textContent = `Scanned ${data.files_inspected} files in ${data.scanned_root}, zero secret values exposed.`;
+        renderScanNavigator(data);
+      } catch (err) {
+        msgEl.textContent = `Could not reach local 127.0.0.1 scanner (${err.message}). Use 'Browse Folder Offline' instead.`;
+      }
+    }
+
+    async function runBrowserFolderScan(fileList) {
+      if (!fileList || !fileList.length) return;
+      const msgEl = document.getElementById("scanStatusMsg");
+      msgEl.textContent = "Inspecting selected local folder in browser memory (secret values ignored)...";
+
+      const sdkCatalog = [
+        ["openai", "OpenAI SDK", "LLM Provider SDK"],
+        ["anthropic", "Anthropic Claude SDK", "LLM Provider SDK"],
+        ["@anthropic-ai/sdk", "Anthropic Claude JS SDK", "LLM Provider SDK"],
+        ["@google/genai", "Google GenAI SDK", "LLM Provider SDK"],
+        ["google-generativeai", "Google Gemini SDK", "LLM Provider SDK"],
+        ["langchain", "LangChain", "Agent / Orchestration Framework"],
+        ["llama-index", "LlamaIndex", "RAG / Orchestration Framework"],
+        ["ollama", "Ollama Local LLM", "Local Model Runtime"],
+        ["litellm", "LiteLLM Gateway/Router", "Model Router / Proxy"],
+        ["pinecone", "Pinecone Vector DB", "Vector Store"],
+        ["chromadb", "ChromaDB", "Vector Store"]
+      ];
+      const envRegex = /^(OPENAI_|AZURE_OPENAI_|ANTHROPIC_|CLAUDE_|GEMINI_|GOOGLE_API_KEY|BEDROCK_|COHERE_|MISTRAL_|GROQ_|LITELLM_|LANGCHAIN_|LANGSMITH_|OLLAMA_|HF_TOKEN|HUGGINGFACE_|PINECONE_|CURSOR_)[A-Z0-9_]*$/;
+
+      const ai_sdks = [], ai_env_vars = [], agent_and_mcp_configs = [], policy_docs = [], discovered_csvs = [];
+      const folderMap = {};
+      let inspected = 0;
+
+      for (const file of Array.from(fileList)) {
+        const rel = (file.webkitRelativePath || file.name).replace(/\\/g, "/");
+        if (/(^|\/)(\.git|node_modules|\.venv|venv|__pycache__|dist|build)\//.test(rel)) continue;
+        inspected++;
+        if (inspected > 2000) break;
+        const fnameL = file.name.toLowerCase();
+        const top = rel.includes("/") ? rel.split("/")[0] : "(root)";
+        if (!folderMap[top]) folderMap[top] = { sdks: 0, env_vars: 0, agent_configs: 0, policy_docs: 0, csv_exports: 0 };
+
+        if ([".cursorrules", ".windsurfrules", "claude.md", "agents.md", "mcp.json", ".mcp.json", "claude_desktop_config.json", "cursor_mcp.json"].includes(fnameL)) {
+          let mcp_servers = [];
+          if (fnameL.endsWith(".json")) {
+            try {
+              const cfg = JSON.parse(await file.text());
+              const srv = cfg.mcpServers || cfg.servers || {};
+              mcp_servers = Object.keys(srv);
+            } catch (_) {}
+          }
+          agent_and_mcp_configs.push({ path: rel, type: fnameL.endsWith(".json") ? "MCP Server Config" : "AI Agent Instructions", mcp_servers });
+          folderMap[top].agent_configs++;
+        }
+
+        if (["package.json", "pyproject.toml", "pipfile", "go.mod", "cargo.toml"].includes(fnameL) || (fnameL.startsWith("requirements") && fnameL.endsWith(".txt"))) {
+          const txt = (await file.text()).slice(0, 200000).toLowerCase();
+          for (const [sig, label, category] of sdkCatalog) {
+            if (txt.includes(sig)) {
+              ai_sdks.push({ manifest: rel, package: sig, label, category });
+              folderMap[top].sdks++;
+            }
+          }
+        }
+
+        if (fnameL === ".env" || fnameL.startsWith(".env.") || fnameL.startsWith("docker-compose.")) {
+          const txt = (await file.text()).slice(0, 150000);
+          const isLive = [".env", ".env.local", ".env.production"].includes(fnameL);
+          for (const rawLine of txt.split(/\r?\n/)) {
+            const ln = rawLine.trim().replace(/^export\s+/, "").replace(/^-\s+/, "");
+            if (!ln || ln.startsWith("#")) continue;
+            const sep = ln.includes("=") ? "=" : (ln.includes(":") ? ":" : null);
+            if (!sep) continue;
+            const key = ln.split(sep)[0].trim().replace(/^['"]|['"]$/g, "");
+            if (envRegex.test(key)) {
+              ai_env_vars.push({ file: rel, var_name: key, value_redacted: true, source_risk: isLive ? "live_env_file" : "template_or_compose" });
+              folderMap[top].env_vars++;
+            }
+          }
+        }
+
+        if (fnameL.endsWith(".csv")) {
+          const txt = (await file.text()).slice(0, 200000);
+          const rows = parseCsvRows(txt);
+          if (txt.toLowerCase().includes("tool_name") || txt.toLowerCase().includes("vendor_name")) {
+            const csv_kind = txt.toLowerCase().includes("tool_name") ? "oauth_tools_csv" : "vendor_inventory_csv";
+            discovered_csvs.push({ path: rel, csv_kind, row_count: rows.length, headers: [], csv_preview_text: rows.length ? txt : "" });
+            folderMap[top].csv_exports++;
+          }
+        }
+
+        if (fnameL.endsWith(".md") && ["policy", "governance", "security", "privacy", "acceptable", "compliance", "ai", "outreach"].some(k => fnameL.includes(k))) {
+          const txt = (await file.text()).slice(0, 150000);
+          const tl = txt.toLowerCase();
+          policy_docs.push({
+            path: rel,
+            title: file.name,
+            mentions_ai_policy: tl.includes("acceptable use") || tl.includes("ai policy") || tl.includes("shadow-ai"),
+            mentions_zdr: tl.includes("zero data retention") || tl.includes("zdr"),
+            frameworks_referenced: ["SOC 2", "ISO 27001", "HIPAA", "EU AI Act", "GDPR"].filter(f => tl.includes(f.toLowerCase()))
+          });
+          folderMap[top].policy_docs++;
+        }
+      }
+
+      const synthLines = ["vendor_name,model_or_feature,zdr_enabled,baa_or_dpa_signed,logging_retained_days"];
+      ai_sdks.forEach(s => synthLines.push(`${s.label},${s.package},unknown,unknown,0`));
+      const dedupSynth = Array.from(new Set(synthLines));
+
+      const data = {
+        scanned_root: fileList[0].webkitRelativePath ? fileList[0].webkitRelativePath.split("/")[0] : "Selected Folder",
+        files_inspected: inspected,
+        counts: {
+          ai_sdks_found: ai_sdks.length,
+          ai_env_vars_found: ai_env_vars.length,
+          agent_and_mcp_configs_found: agent_and_mcp_configs.length,
+          policy_docs_found: policy_docs.length,
+          csv_exports_found: discovered_csvs.length
+        },
+        directory_breakdown: Object.entries(folderMap).map(([folder, v]) => ({ folder, ...v })),
+        ai_sdks,
+        ai_env_vars,
+        agent_and_mcp_configs,
+        policy_docs,
+        discovered_csvs,
+        suggested_assessment_merge: {
+          recommended_departments: (ai_sdks.length || ai_env_vars.length) ? ["engineering"] : [],
+          recommended_account_tiers: ai_env_vars.length ? ["api_keys_in_repos"] : [],
+          synthesized_vendor_csv: dedupSynth.length > 1 ? dedupSynth.join("\n") : ""
+        }
+      };
+      lastScanResult = data;
+      msgEl.textContent = `Inspected ${inspected} local files in browser memory. Secret values after '=' were discarded and not stored.`;
+      renderScanNavigator(data);
+    }
+
+    function renderScanNavigator(data) {
+      document.getElementById("scanResultsContainer").style.display = "block";
+      const c = data.counts || {};
+      document.getElementById("scanMetricsRow").innerHTML = `
+        <div class="metric-box"><div class="m-label">AI SDK References</div><div class="m-val">${c.ai_sdks_found || 0}</div></div>
+        <div class="metric-box"><div class="m-label">AI Env Vars (Redacted)</div><div class="m-val">${c.ai_env_vars_found || 0}</div></div>
+        <div class="metric-box"><div class="m-label">Agent / MCP Configs</div><div class="m-val">${c.agent_and_mcp_configs_found || 0}</div></div>
+        <div class="metric-box"><div class="m-label">Policy Docs &amp; CSVs</div><div class="m-val">${(c.policy_docs_found || 0) + (c.csv_exports_found || 0)}</div></div>
+      `;
+      const firstBtn = document.querySelector("#scanTabs .tab-btn");
+      showScanTab(currentScanTab, firstBtn);
+    }
+
+    function showScanTab(tab, btnEl) {
+      currentScanTab = tab;
+      if (btnEl) {
+        document.querySelectorAll("#scanTabs .tab-btn").forEach(b => b.classList.remove("active"));
+        btnEl.classList.add("active");
+      }
+      if (!lastScanResult) return;
+      const panel = document.getElementById("scanTabPanel");
+
+      if (tab === "sdks") {
+        const list = lastScanResult.ai_sdks || [];
+        panel.innerHTML = list.length ? `
+          <table><thead><tr><th>Manifest File</th><th>Package</th><th>Detected Provider / Framework</th><th>Category</th></tr></thead>
+          <tbody>${list.map(s => `<tr><td><code>${escHtml(s.manifest)}</code></td><td><code>${escHtml(s.package)}</code></td><td><strong>${escHtml(s.label)}</strong></td><td>${escHtml(s.category)}</td></tr>`).join("")}</tbody></table>
+        ` : `<p class="status-note">No AI SDK dependencies detected in scanned manifests.</p>`;
+      } else if (tab === "env") {
+        const list = lastScanResult.ai_env_vars || [];
+        panel.innerHTML = list.length ? `
+          <table><thead><tr><th>Config File</th><th>Variable Name</th><th>Secret Status</th><th>Source Type</th></tr></thead>
+          <tbody>${list.map(v => `<tr><td><code>${escHtml(v.file)}</code></td><td><code>${escHtml(v.var_name)}</code></td><td><span class="pill-tag ok">[VALUE REDACTED]</span></td><td><span class="pill-tag ${v.source_risk === 'live_env_file' ? 'warn' : ''}">${escHtml(v.source_risk)}</span></td></tr>`).join("")}</tbody></table>
+        ` : `<p class="status-note">No AI environment variable names detected.</p>`;
+      } else if (tab === "agents") {
+        const list = lastScanResult.agent_and_mcp_configs || [];
+        panel.innerHTML = list.length ? `
+          <table><thead><tr><th>Path</th><th>Artifact Type</th><th>MCP Server Keys</th></tr></thead>
+          <tbody>${list.map(a => `<tr><td><code>${escHtml(a.path)}</code></td><td>${escHtml(a.type)}</td><td>${a.mcp_servers && a.mcp_servers.length ? escHtml(a.mcp_servers.join(", ")) : "—"}</td></tr>`).join("")}</tbody></table>
+        ` : `<p class="status-note">No .cursor / .claude / AGENTS.md / MCP config files found.</p>`;
+      } else if (tab === "policies") {
+        const docs = lastScanResult.policy_docs || [];
+        const csvs = lastScanResult.discovered_csvs || [];
+        let html = "";
+        if (csvs.length) {
+          html += `<table><thead><tr><th>Discovered CSV</th><th>Type</th><th>Data Rows</th></tr></thead><tbody>${csvs.map(c => `<tr><td><code>${escHtml(c.path)}</code></td><td>${escHtml(c.csv_kind)}</td><td>${c.row_count}</td></tr>`).join("")}</tbody></table>`;
+        }
+        if (docs.length) {
+          html += `<table style="margin-top:10px;"><thead><tr><th>Markdown File</th><th>Heading</th><th>AI Policy Mentioned</th><th>ZDR Mentioned</th><th>Frameworks</th></tr></thead><tbody>${docs.map(d => `<tr><td><code>${escHtml(d.path)}</code></td><td>${escHtml(d.title)}</td><td>${d.mentions_ai_policy ? "Yes" : "No"}</td><td>${d.mentions_zdr ? "Yes" : "No"}</td><td>${escHtml((d.frameworks_referenced || []).join(", ") || "—")}</td></tr>`).join("")}</tbody></table>`;
+        }
+        panel.innerHTML = html || `<p class="status-note">No policy Markdown docs or inventory CSVs found.</p>`;
+      } else if (tab === "folders") {
+        const list = lastScanResult.directory_breakdown || [];
+        panel.innerHTML = list.length ? `
+          <table><thead><tr><th>Subfolder</th><th>AI SDKs</th><th>Env Vars</th><th>Agent/MCP</th><th>Policy Docs</th><th>CSVs</th></tr></thead>
+          <tbody>${list.map(f => `<tr><td><strong><code>${escHtml(f.folder)}</code></strong></td><td>${f.sdks}</td><td>${f.env_vars}</td><td>${f.agent_configs}</td><td>${f.policy_docs}</td><td>${f.csv_exports}</td></tr>`).join("")}</tbody></table>
+        ` : `<p class="status-note">No AI artifacts grouped by folder yet.</p>`;
+      }
+    }
+
+    function mergeScanIntoForm() {
+      if (!lastScanResult) return;
+      const merge = lastScanResult.suggested_assessment_merge || {};
+      (merge.recommended_departments || []).forEach(v => {
+        const el = document.querySelector(`input[name="dept"][value="${v}"]`);
+        if (el) el.checked = true;
+      });
+      (merge.recommended_account_tiers || []).forEach(v => {
+        const el = document.querySelector(`input[name="tier"][value="${v}"]`);
+        if (el) el.checked = true;
+      });
+
+      const csvs = lastScanResult.discovered_csvs || [];
+      const oauthHit = csvs.find(c => c.csv_kind === "oauth_tools_csv" && c.row_count > 0 && c.csv_preview_text);
+      const vendorHit = csvs.find(c => c.csv_kind === "vendor_inventory_csv" && c.row_count > 0 && c.csv_preview_text);
+      if (oauthHit && !document.getElementById("oauth_tools_csv_text").value.trim()) {
+        document.getElementById("oauth_tools_csv_text").value = oauthHit.csv_preview_text;
+      }
+      if (vendorHit && !document.getElementById("vendor_inventory_csv_text").value.trim()) {
+        document.getElementById("vendor_inventory_csv_text").value = vendorHit.csv_preview_text;
+      } else if (merge.synthesized_vendor_csv && !document.getElementById("vendor_inventory_csv_text").value.trim()) {
+        document.getElementById("vendor_inventory_csv_text").value = merge.synthesized_vendor_csv;
+      }
+      handleRunAssessment(null);
+    }
+
+    // --- Downloads & Helpers ---
+    function triggerBlobDownload(filename, content, mime = "text/plain;charset=utf-8") {
+      const blob = new Blob([content], { type: mime });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function downloadBlankTemplate(kind) {
+      if (kind === "oauth") {
+        triggerBlobDownload("blank_oauth_and_tools.csv", BLANK_OAUTH_CSV, "text/csv;charset=utf-8");
+      } else {
+        triggerBlobDownload("blank_vendor_models.csv", BLANK_VENDOR_CSV, "text/csv;charset=utf-8");
+      }
+    }
+
+    function loadCsvFileInto(inputEl, targetId) {
+      const f = inputEl.files && inputEl.files[0];
+      if (!f) return;
+      const reader = new FileReader();
+      reader.onload = e => { document.getElementById(targetId).value = String(e.target.result || ""); };
+      reader.readAsText(f);
+    }
+
+    function downloadCapsuleJson() {
+      if (!lastCapsule) lastCapsule = evaluateIntakeJS(collectFormPayload(), currentMode);
+      triggerBlobDownload("varinull-capsule-sprint2.json", JSON.stringify(lastCapsule, null, 2), "application/json;charset=utf-8");
+    }
+
+    function downloadMarkdownSummary() {
+      if (!lastCapsule) lastCapsule = evaluateIntakeJS(collectFormPayload(), currentMode);
+      const ca = lastCapsule.client_assessment || {};
+      const p = lastCapsule.prospect || {};
+      const lines = [
+        `# ${lastCapsule.niche_title}`,
+        `**Governance Readiness Snapshot** | Generated: \`${lastCapsule.generated_at}\` | Mode: \`${lastCapsule.mode}\``,
+        "",
+        "## Organization Context",
+        `- **Workspace / Organization:** ${p.company_name || "Local Workspace (Anonymous)"}`,
+        `- **Industry:** \`${p.industry}\` | **Team Size:** \`${p.team_size}\``,
+        "",
+        "## Executive Readiness Summary",
+        `- **Headline Score:** **${ca.score_label}**`,
+        `- **Severity Tier:** \`${ca.severity_tier}\``,
+        `- **Estimated Audit Turnaround:** \`${ca.estimated_sprint_days}\``,
+        "",
+        "| Metric | Value |",
+        "| :--- | :--- |",
+        ...(ca.key_metrics || []).map(m => `| ${m.label} | **${m.value}** |`),
+        "",
+        "## Top Governance & Shadow-AI Findings",
+        ...(ca.top_findings || []).flatMap(f => [
+          `### [${f.id}] (${f.severity}) ${f.title}`,
+          `- **Observation:** ${f.detail}`,
+          `- **Recommended Action:** ${f.client_next_step}`,
+          ""
+        ]),
+        "## Safe-to-Deploy Governance Checklist",
+        "| Step | Category | Control Item | Status |",
+        "| :--- | :--- | :--- | :--- |",
+        ...(ca.safe_to_deploy_checklist || []).map(c => `| ${c.step} | ${c.category} | ${c.item} | \`${c.status}\` |`),
+        "",
+        "---",
+        "> **Handling this internally?** Use the checklist above freely. **Want a focused readiness audit (typically 2-3 weeks) & buyer-ready governance pack?** Export a sanitized metadata capsule (`varinull-capsule-sprint2.json`) whenever you want VARINULL's help."
+      ];
+      triggerBlobDownload("shadow-ai-readiness-snapshot.md", lines.join("\n") + "\n", "text/markdown;charset=utf-8");
+    }
+
+    async function switchMode(targetMode) {
+      currentMode = targetMode === "demo" ? "demo" : "production";
+      const banner = document.getElementById("demoBanner");
+      const btn = document.getElementById("modeToggleBtn");
+      if (currentMode === "demo") {
+        banner.classList.add("active");
+        btn.style.display = "inline-flex";
+        btn.textContent = "Switch to Blank Assessment";
+        btn.onclick = () => switchMode("production");
+        let demoPayload = DEMO_PAYLOAD;
+        if (window.location.protocol.startsWith("http")) {
+          try {
+            const r = await fetch("/api/demo");
+            if (r.ok) {
+              const d = await r.json();
+              if (d && d.payload) demoPayload = d.payload;
+            }
+          } catch (_) {}
+        }
+        populateForm(demoPayload);
+        await handleRunAssessment(null);
+      } else {
+        banner.classList.remove("active");
+        btn.style.display = "none";
+        resetBlankForm();
+        if (window.history && window.history.replaceState) {
+          const cleanPath = window.location.pathname.endsWith("/demo") ? "/" : window.location.pathname;
+          window.history.replaceState({}, "", cleanPath);
+        }
+      }
+    }
+
+    (function init() {
+      const params = new URLSearchParams(window.location.search);
+      const isDemo = window.location.pathname.endsWith("/demo") || params.get("mode") === "demo";
+      if (isDemo) {
+        switchMode("demo");
+      } else {
+        resetBlankForm();
+      }
+    })();
+  </script>
+</body>
+</html>
